@@ -17,11 +17,11 @@ export class MyInfoComponent implements OnInit {
   ngOnInit(): void {
     this.myInfoService.getUserInfo().subscribe({
       next: (response) => {
-        console.log('User info received:', response); // Añadir log
+        console.log('User info received:', response); 
         this.user = response;
       },
       error: (error) => {
-        console.error('Error fetching user info:', error); // Añadir log
+        console.error('Error fetching user info:', error); 
         Swal.fire({
           title: 'Error',
           text: 'No se pudo cargar la información del usuario',
@@ -37,7 +37,7 @@ export class MyInfoComponent implements OnInit {
     if (this.user) {
       this.myInfoService.updateUserInfo(this.user).subscribe({
         next: (updatedUser) => {
-          console.log('User info updated:', updatedUser); // Añadir log
+          console.log('User info updated:', updatedUser);
           this.user = updatedUser;
           Swal.fire({
             title: 'Actualización exitosa',
@@ -48,7 +48,7 @@ export class MyInfoComponent implements OnInit {
           });
         },
         error: (error) => {
-          console.error('Error updating user info:', error); // Añadir log
+          console.error('Error updating user info:', error); 
           Swal.fire({
             title: 'Error',
             text: 'No se pudo actualizar la información',
