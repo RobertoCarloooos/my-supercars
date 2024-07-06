@@ -7,19 +7,16 @@ import { User } from '../interfaces/user';
   providedIn: 'root'
 })
 export class AuthService {
+  user: User | null = null;
+  url: string = "http://localhost:3000/api/users";
 
-  user: User|null = null
-  url: string = "http://localhost:3000/api/users"
-
-
-  constructor(private http : HttpClient, private cookieService: CookieService) {
-    // rescatar usuario de las cookies
-    if(cookieService.check('user')){
-      this.user = JSON.parse(cookieService.get('user')) 
+  constructor(private http: HttpClient, private cookieService: CookieService) {
+    if (cookieService.check('user')) {
+      this.user = JSON.parse(cookieService.get('user'));
     }
   }
 
-  signup(name: string, email: string, pwd: string){
+  signup(name: string, email: string, pwd: string) {
     return this.http.post(
       `${this.url}/register`,
       {
@@ -27,28 +24,30 @@ export class AuthService {
         email: email,
         password: pwd
       }
-    )
+    );
   }
 
-  login(email: string, pass: string){
-    return this.http.post(`${this.url}/login`,
-    {
+  login(email: string, pass: string) {
+    return this.http.post(`${this.url}/login`, {
       email: email,
       password: pass,
-    })
+    });
   }
 
-  saveUser(user: User){
-    this.user = user
-    this.cookieService.set("user", JSON.stringify(user))
+  saveUser(user: User) {
+    this.user = user;
+    this.cookieService.set("user", JSON.stringify(user));
   }
 
-  deleteUser(){
-    this.user = null
-    this.cookieService.delete("user")
+  deleteUser() {
+    this.user = null;
+    this.cookieService.delete("user");
   }
 
-  isUserAdmin(): boolean {
-    return this.user?.role === 'admin';
+  getUser(): User | null {
+    if (this.user === null && this.cookieService.check('user')) {
+      this.user = JSON.parse(this.cookieService.get('user'));
+    }
+    return this.user;
   }
 }

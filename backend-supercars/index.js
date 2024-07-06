@@ -31,15 +31,18 @@ app.use('/api/users', userRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/vehicles', vehicleRoutes);
 
+
+//CONEXION VERCEL
+app.get("/", (req,res) => (
+    res.send("Express en Vercel(version 2)")// para que la raiz devuelva el mensaje para ver que todo va OK
+))
+
 // Definir el puerto y poner en marcha el servidor
 const PORT = process.env.PORT || 3000;
-
-app.get("/",(req,res)=>{
-    res.send("Express en Vercel")
-})
-
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 
+//para vercel
 module.exports = app
+
