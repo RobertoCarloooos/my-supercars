@@ -1,3 +1,39 @@
-.sin-stock{
-    color: red;
-}
+/* Estilo para el título del catálogo */
+h1 {
+    margin-bottom: 20px; /* Espacio inferior */
+    color: #000000; /* Azul vivo */
+  }
+  
+  /* Estilo para el contenedor del filtro */
+  .input-group {
+    margin-bottom: 20px; /* Espacio inferior */
+  }
+  
+  /* Estilo para la tarjeta de vehículo */
+  .card {
+    transition: transform 0.2s; /* Transición suave al pasar el ratón */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Elevación sutil al pasar el ratón */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  }
+  
+  /* Estilo para el botón de alquilar */
+  .btn-outline-primary {
+    width: 100%; /* Ancho completo */
+    background-color: #ffffff; /* Verde */
+    border-color: #28a745; /* Borde verde */
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el ratón */
+    border-color: #218838; /* Borde verde más oscuro al pasar el ratón */
+  }
+  
+  /* Estilo para el texto de "Sin stock" */
+  .sin-stock {
+    color: #dc3545; /* Rojo */
+  }
+  

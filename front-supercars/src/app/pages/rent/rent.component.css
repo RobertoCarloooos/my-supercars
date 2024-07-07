@@ -1,5 +1,54 @@
-.separador{
-    width: 1px;
-    background-color: rgb(102, 102, 102);
-    height: 400px;
-}
+/* Estilo para el separador entre las columnas en pantallas medianas y grandes */
+.separador {
+    height: 100%;
+    border-right: 2px solid #ccc; /* Borde derecho gris */
+  }
+  
+  /* Estilo para el botón de mostrar código promocional */
+  .btn-danger {
+    color: #fff; /* Texto blanco */
+    background-color: #dc3545; /* Rojo */
+    border-color: #dc3545; /* Borde rojo */
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333; /* Rojo más oscuro al pasar el ratón */
+    border-color: #bd2130; /* Borde rojo más oscuro al pasar el ratón */
+  }
+  
+  /* Estilo para el contenedor de la información de precio */
+  .bg-secondary {
+    /* Fondo gris oscuro */
+    background-color: #343a40;
+  }
+  
+  /* Estilo para el texto dentro del contenedor de precio */
+  .text-white {
+    color: #fff; /* Texto blanco */
+  }
+  
+  /* Estilo para los botones en el formulario */
+  .btn-outline-secondary {
+    border-color: #ccc; /* Borde gris */
+    color: #6c757d; /* Color del texto */
+  }
+  
+  .btn-outline-secondary:hover {
+    background-color: #f8f9fa; /* Fondo gris claro al pasar el ratón */
+  }
+  
+  /* Estilo para el alert de advertencia */
+  .alert-danger {
+    background-color: #f8d7da; /* Fondo rojo claro */
+    border-color: #f5c6cb; /* Borde rojo claro */
+    color: #721c24; /* Texto rojo oscuro */
+  }
+  
+  .alert-danger a {
+    color: #721c24; /* Color de enlace rojo oscuro */
+  }
+  
+  .alert-danger a:hover {
+    color: #491217; /* Color de enlace más oscuro al pasar el ratón */
+  }
+  

@@ -1,0 +1,65 @@
+/* Estilo para el título del formulario */
+h1 {
+    color: #007bff; /* Color azul vivo */
+    font-size: 2rem; /* Tamaño de fuente grande */
+    margin-bottom: 20px; /* Espacio inferior */
+  }
+  
+  /* Estilo para el icono en el título */
+  h1 .fa-user {
+    margin-right: 10px; /* Espacio a la derecha del icono */
+  }
+  
+  /* Estilo para las etiquetas del formulario */
+  .form-label {
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  /* Estilo para los campos de entrada */
+  .form-control {
+    border-color: #007bff; /* Color del borde azul vivo */
+  }
+  
+  .form-control:focus {
+    border-color: #0056b3; /* Color del borde más oscuro al estar enfocado */
+  }
+  
+  /* Estilo para el botón de registro */
+  .btn-primary {
+    background-color: #007bff; /* Azul vivo */
+    border-color: #007bff; /* Borde azul vivo */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+    border-color: #0056b3; /* Borde azul más oscuro al pasar el ratón */
+  }
+  
+  /* Estilo para el icono en el botón */
+  .btn-primary .fa-key {
+    margin-right: 5px; /* Espacio a la derecha del icono */
+  }
+  
+  /* Estilo para el botón de mostrar/ocultar contraseña */
+  .input-group-text {
+    cursor: pointer; /* Cursor de tipo mano */
+  }
+  
+  .input-group-text:hover {
+    background-color: #e9ecef; /* Color de fondo claro al pasar el ratón */
+  }
+  
+  /* Estilo para el texto adicional debajo del formulario */
+  p {
+    margin-top: 20px; /* Espacio superior */
+  }
+  
+  /* Estilo para el enlace de inicio de sesión */
+  p a {
+    color: #007bff; /* Color azul vivo */
+  }
+  
+  p a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+  }
+  
